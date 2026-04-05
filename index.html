@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nezir Imamovic – Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #0d1117;
+      color: #e6edf3;
+      transition: background 0.5s, color 0.5s;
+    }
+    .light-mode {
+      background: #f5f7fa;
+      color: #1a1a1a;
+    }
+    header {
+      background: linear-gradient(135deg, #3b82f6, #0ea5e9);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      top: -50%; left: -50%;
+      width: 200%; height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, rgba(0,0,0,0) 60%);
+      animation: pulse 6s infinite linear;
+    }
+    @keyframes pulse {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      font-weight: 600;
+      animation: fadeInDown 1s ease;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      font-weight: 300;
+      animation: fadeInUp 1.2s ease;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 40px auto;
+    }
+    section {
+      margin-bottom: 50px;
+      background: rgba(255,255,255,0.05);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      backdrop-filter: blur(12px);
+      transition: background 0.5s;
+      animation: glowIn 0.8s ease;
+    }
+    .light-mode section {
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    @keyframes glowIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    section h2 {
+      margin-top: 0;
+      font-size: 1.8rem;
+      border-left: 5px solid #3b82f6;
+      padding-left: 15px;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .skill-box {
+      background: #161b22;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      border: 1px solid #30363d;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: techFloat 4s ease-in-out infinite;
+    }
+    .light-mode .skill-box { background: #eef2ff; border: none; }
+    @keyframes techFloat {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+      100% { transform: translateY(0px); }
+    }
+    .skill-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #3b82f6;
+    }
+    #themeToggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #3b82f6;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: 0.3s;
+    }
+    #themeToggle:hover {
+      background: #0ea5e9;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Nezir Imamovic</h1>
+  <p>System / DevOps Engineer | Cloud Native Enthusiast | Azure & Kubernetes Specialist</p>
+</header>
+
+<div class="container">
+
+  <section>
+    <h2>Professional Summary</h2>
+    <p>
+      System/DevOps Engineer with 5+ years of experience building and maintaining the B.Braun Health Cloud platform. 
+      Specialized in cloud-native architecture, CI/CD automation, infrastructure as code, and enabling development teams 
+      to deliver high‑quality digital products efficiently.
+    </p>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="timeline-item">
+      <h3>System/DevOps Engineer – BBraun SE (2020–Present)</h3>
+      <p>
+        • Built and scaled the B.Braun Health Cloud using Terraform and modular workload concepts.<br>
+        • Implemented CI/CD pipelines and DevOps workflows for multiple internal teams.<br>
+        • Designed cloud-native architectures to support resilient, modern digital solutions.<br>
+        • Improved release cycles from 3-4 months to every 2 weeks while increasing product quality.<br>
+        • Provided shared services including Kubernetes, GitHub Enterprise, Snyk, Artifactory, SonarQube.
+      </p>
+    </div>
+    <div class="timeline-item">
+      <h3>IT Apprenticeship – BBraun SE (2017–2020)</h3>
+      <p>
+        • Rotated through multiple IT departments and specialized in cloud engineering.<br>
+        • Final thesis: Automated deployment of VMs into Microsoft Azure.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills & Strengths</h2>
+    <div class="skills-grid">
+      <div class="skill-box">Microsoft Azure</div>
+      <div class="skill-box">Kubernetes & Docker</div>
+      <div class="skill-box">Terraform & Bicep</div>
+      <div class="skill-box">Python & Bash</div>
+      <div class="skill-box">GitHub Actions / Azure DevOps</div>
+      <div class="skill-box">Ansible</div>
+      <div class="skill-box">Cloud Architecture</div>
+      <div class="skill-box">CI/CD Automation</div>
+      <div class="skill-box">Developer Enablement</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <p><strong>Apprenticeship IT</strong> – BBraun SE (2017–2020)</p>
+    <p><strong>Apprenticeship Nurse</strong> – Bad Hersfeld (2015–2016)</p>
+    <p><strong>Biology Studies</strong> – University Tuzla (2008–2010)</p>
+    <p><strong>Chemical Engineer (Biotechnology)</strong> – Technical School Lukavac (2004–2008)</p>
+  </section>
+
+  <section>
+    <h2>Languages</h2>
+    <p>English (C1) • German (Fluent) • Bosnian (Fluent)</p>
+  </section>
+
+  <section>
+    <h2>Additional Information</h2>
+    <p><strong>Volunteer:</strong> Drone pilot at the German Red Cross.</p>
+    <p><strong>Hobbies:</strong> 3D printing, RC planes, archery.</p>
+  </section>
+
+</div>
+
+<button id="themeToggle">Toggle Theme</button>
+<script>
+  const btn = document.getElementById('themeToggle');
+  btn.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+  });
+</script>
+</body>
+</html>
